@@ -11,11 +11,11 @@
   },
   "iconLibrary": "phosphor",
   "aliases": {
-    "components": "@workspace/ui/components",
-    "utils": "@workspace/ui/lib/utils",
-    "hooks": "@workspace/ui/hooks",
-    "lib": "@workspace/ui/lib",
-    "ui": "@workspace/ui/components"
+    "components": "@kona/ui/components",
+    "utils": "@kona/ui/lib/utils",
+    "hooks": "@kona/ui/hooks",
+    "lib": "@kona/ui/lib",
+    "ui": "@kona/ui/components"
   },
   "rtl": false,
   "menuColor": "default",

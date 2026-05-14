@@ -24,6 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@kona/auth/*": ["../../packages/auth/src/*"],
+      "@kona/db/*": ["../../packages/db/src/*"],
       "@kona/ui/*": ["../../packages/ui/src/*"]
     }
   }

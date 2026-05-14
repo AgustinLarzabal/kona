@@ -17,6 +17,8 @@
     "@tanstack/react-router": "^1.132.0",
     "@tanstack/react-start": "^1.132.0",
     "@tanstack/router-plugin": "^1.132.0",
+    "@kona/auth": "workspace:*",
+    "@kona/db": "workspace:*",
     "@kona/ui": "workspace:*",
     "nitro": "latest",
     "react": "^19.2.4",

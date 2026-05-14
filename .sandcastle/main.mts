@@ -36,7 +36,11 @@ const MAX_ITERATIONS = 10;
 // pnpm install ensures the sandbox always has fresh dependencies and
 // recreates per-package node_modules symlinks that copyToWorktree skips.
 const hooks = {
-  sandbox: { onSandboxReady: [{ command: "pnpm install --frozen-lockfile" }] },
+  sandbox: {
+    onSandboxReady: [
+      { command: "pnpm install --frozen-lockfile --store-dir .pnpm-store" },
+    ],
+  },
 };
 
 // Copy node_modules from the host into the worktree before each sandbox

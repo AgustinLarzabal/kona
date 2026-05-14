@@ -29,6 +29,12 @@ dist
 # Debug
 npm-debug.log*
 
+# SQLite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
 # Misc
 .DS_Store
 *.pem

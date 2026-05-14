@@ -40,27 +40,34 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
-function RootComponent() {
+function SessionControls() {
   const { data: session, isPending } = useSession()
+
+  if (isPending) return null
+
+  if (!session) {
+    return (
+      <Link to="/login" className="underline">
+        Sign in
+      </Link>
+    )
+  }
 
   return (
     <>
+      <span>Signed in as {session.user.email}</span>
+      <button className="underline" onClick={() => signOut()}>
+        Sign out
+      </button>
+    </>
+  )
+}
+
+function RootComponent() {
+  return (
+    <>
       <header className="flex items-center justify-end gap-4 border-b px-6 py-3 text-sm">
-        {isPending ? null : session ? (
-          <>
-            <span>Signed in as {session.user.email}</span>
-            <button
-              className="underline"
-              onClick={() => signOut()}
-            >
-              Sign out
-            </button>
-          </>
-        ) : (
-          <Link to="/login" className="underline">
-            Sign in
-          </Link>
-        )}
+        <SessionControls />
       </header>
       <Outlet />
     </>

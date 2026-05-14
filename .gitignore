@@ -30,7 +30,7 @@ dist
 # Debug
 npm-debug.log*
 
-# SQLite
+# Database
 *.db
 *.db-journal
 *.db-wal

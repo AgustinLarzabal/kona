@@ -29,6 +29,12 @@ dist
 # Debug
 npm-debug.log*
 
+# Database
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
 # Misc
 .DS_Store
 *.pem

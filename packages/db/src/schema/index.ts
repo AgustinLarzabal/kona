@@ -1,1 +1,1 @@
-export { user, session, account, verification } from "./auth.js";
+export { user, session, account, verification } from "./auth"

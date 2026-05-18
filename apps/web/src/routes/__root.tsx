@@ -47,7 +47,7 @@ function SessionControls() {
 
   if (!session) {
     return (
-      <Link to="/login" className="underline">
+      <Link to="/login" search={{ redirect: "/" }} className="underline">
         Sign in
       </Link>
     )

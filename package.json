@@ -9,7 +9,7 @@
     "format": "turbo format",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
-    "sandcastle": "npx tsx .sandcastle/main.mts"
+    "sandcastle": "pnpm exec tsx .sandcastle/main.mts"
   },
   "devDependencies": {
     "@ai-hero/sandcastle": "^0.5.10",

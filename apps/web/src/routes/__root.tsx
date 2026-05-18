@@ -40,6 +40,23 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
+function NavLinks() {
+  const { data: session, isPending } = useSession()
+
+  if (isPending || !session) return null
+
+  return (
+    <>
+      <Link to="/apps" className="underline">
+        Apps
+      </Link>
+      <Link to="/settings" className="underline">
+        Settings
+      </Link>
+    </>
+  )
+}
+
 function SessionControls() {
   const { data: session, isPending } = useSession()
 
@@ -67,6 +84,7 @@ function RootComponent() {
   return (
     <>
       <header className="flex items-center justify-end gap-4 border-b px-6 py-3 text-sm">
+        <NavLinks />
         <SessionControls />
       </header>
       <Outlet />

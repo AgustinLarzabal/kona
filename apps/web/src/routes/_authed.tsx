@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_authed")({
       })
     }
   },
-  component: () => <Outlet />,
+  component: Outlet,
 })
